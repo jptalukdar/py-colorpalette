@@ -27,9 +27,3 @@ class Palette:
         self.named_palette[name] = value
 
 
-# if __name__ == "__main__":
-#   name = "primary"
-#   color_code = "850000"
-#   p = Palette("Triad")
-#   p[name] = color.Color(color_code)
-#   assert str(p[name]) == color.format_hex(color_code)
