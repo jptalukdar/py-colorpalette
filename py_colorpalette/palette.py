@@ -18,7 +18,6 @@ class NamedPalette:
 
     def __setitem__(self, name: str, value: Any) -> None:
         name = name.upper()
-        print(name, value)
         if not isinstance(value, color.Color):
             try:
                 value = color.Color(value)

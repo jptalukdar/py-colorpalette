@@ -38,6 +38,11 @@ codestyle-win:
 	poetry run isort --settings-path pyproject.toml ./
 	poetry run black --config pyproject.toml ./
 
+.PHONY: blackisort
+blackisort:
+	poetry run isort --settings-path pyproject.toml ./
+	poetry run black --config pyproject.toml ./
+
 #* Formatters
 .PHONY: codestyle
 codestyle:

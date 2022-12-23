@@ -281,3 +281,95 @@ class MaterialDesignV2(palette.NamedPalette):
 
         for n, c in colors.items():
             self[n] = c
+
+
+class MaterialDesignV3Light(palette.NamedPalette):
+    def __init__(self) -> None:
+        super().__init__(
+            "Material Design V2",
+            "https://m3.material.io/styles/color/the-color-system/tokens",
+        )
+        self.__load_default()
+
+    def __load_default(self):
+        colors = {
+            "Primary": "#D0BCFF",
+            "Primary container": "#4F378B",
+            "Secondary": "#CCC2DC",
+            "Secondary container": "#4A4458",
+            "Tertiary": "#EFB8C8",
+            "Tertiary container": "#633B48",
+            "Surface": "#1C1B1F",
+            "Surface variant": "#49454F",
+            "Background": "#1C1B1F",
+            "Error": "#F2B8B5",
+            "Error container": "#8C1D18",
+            "On primary": "#371E73",
+            "On primary container": "#EADDFF",
+            "On secondary": "#332D41",
+            "On secondary container": "#E8DEF8",
+            "On tertiary": "#492532",
+            "On tertiary container": "#FFD8E4",
+            "On surface": "#E6E1E5",
+            "On surface variant": "#CAC4D0",
+            "On error": "#601410",
+            "On error container": "#F9DEDC",
+            "On background": "#E6E1E5",
+            "Outline": "#938F99",
+            "Outline variant": "#444746",
+            "Shadow": "#000000",
+            "Surface tint": "#D0BCFF",
+            "Inverse surface": "#E6E1E5",
+            "Inverse on surface": "#313033",
+            "Inverse primary": "#6750A4",
+            "Scrim": "#000000",
+        }
+
+        for n, c in colors.items():
+            self[n] = c
+
+
+class MaterialDesignV3Dark(palette.NamedPalette):
+    def __init__(self) -> None:
+        super().__init__(
+            "Material Design V3 Dark",
+            "https://m3.material.io/styles/color/the-color-system/tokens",
+        )
+        self.__load_default()
+
+    def __load_default(self):
+        colors = {
+            "Primary": "#6750A4",
+            "Primary container": "#EADDFF",
+            "Secondary": "#625B71",
+            "Secondary container": "#E8DEF8",
+            "Tertiary": "#7D5260",
+            "Tertiary container": "#FFD8E4",
+            "Surface": "#FFFBFE",
+            "Surface variant": "#E7E0EC",
+            "Background": "#FFFBFE",
+            "Error": "#B3261E",
+            "Error container": "#F9DEDC",
+            "On primary": "#FFFFFF",
+            "On primary container": "#21005E",
+            "On secondary": "#FFFFFF",
+            "On secondary container": "#1E192B",
+            "On tertiary": "#FFFFFF",
+            "On tertiary container": "#370B1E",
+            "On surface": "#1C1B1F",
+            "On surface variant": "#49454E",
+            "On error": "#FFFFFF",
+            "On error container": "#410E0B",
+            "On background": "#1C1B1F",
+            "Outline": "#79747E",
+            "Outline variant": "#C4C7C5",
+            "Shadow": "#000000",
+            "Surface tint": "#6750A4",
+            "Inverse surface": "#313033",
+            "Inverse on surface": "#F4EFF4",
+            "Inverse primary": "#D0BCFF",
+            "Scrim": "#000000",
+        }
+
+        for n, c in colors.items():
+            self[n] = c

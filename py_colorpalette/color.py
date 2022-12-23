@@ -7,7 +7,6 @@ def check_hex(code: str):
 
     if isinstance(code, int):
         code = f"{hex(code)}"
-        print(code)
 
     if code.startswith("#"):
         code = code.strip("#")
@@ -45,7 +44,8 @@ def format_hex(code: str) -> str:
 
     if not code.startswith("#"):
         code = "#" + code
-    return str(code).lower()
+    code = str(code).lower()
+    return code
 
 
 class Color:
@@ -69,7 +69,7 @@ class Color:
         return self.hex
 
     def __eq__(self, __o: object) -> bool:
-        if isinstance(object, Color):
+        if isinstance(__o, Color):
             return self.hex == __o.get_hex()
         try:
             c = Color(__o)
