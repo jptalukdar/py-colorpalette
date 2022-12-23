@@ -25,5 +25,3 @@ class Palette:
                     f"The item {value} [{type(value)}] is not a color. Use Color()."
                 )
         self.named_palette[name] = value
-
-
