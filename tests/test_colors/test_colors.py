@@ -3,6 +3,7 @@ import pytest
 
 from py_colorpalette import color
 
+
 @pytest.mark.parametrize(
     ("code", "expected"),
     [

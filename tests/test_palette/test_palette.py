@@ -1,6 +1,7 @@
 import pytest
-from py_colorpalette import color
-from py_colorpalette import palette
+
+from py_colorpalette import color, palette
+
 
 @pytest.mark.parametrize(
     ("name", "color_code"),

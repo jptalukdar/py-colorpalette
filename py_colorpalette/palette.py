@@ -1,4 +1,5 @@
 from typing import Any
+
 try:
   from py_colorpalette import color
 except ModuleNotFoundError:
