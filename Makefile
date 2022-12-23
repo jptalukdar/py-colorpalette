@@ -31,6 +31,7 @@ pre-commit-install:
 codestyle-win:
 	poetry run pyupgrade --exit-zero-even-if-changed --py39-plus py_colorpalette/color.py
 	poetry run pyupgrade --exit-zero-even-if-changed --py39-plus py_colorpalette/palette.py
+	poetry run pyupgrade --exit-zero-even-if-changed --py39-plus py_colorpalette/themes.py
 	poetry run isort --settings-path pyproject.toml ./
 	poetry run black --config pyproject.toml ./
 
