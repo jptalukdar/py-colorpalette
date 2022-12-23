@@ -56,6 +56,7 @@ def test_palette_index_error():
     with pytest.raises(IndexError):
         p[2]
 
+
 def test_palette_type_error():
     """Linear Palette"""
     p = palette.LinearPalette("test")
