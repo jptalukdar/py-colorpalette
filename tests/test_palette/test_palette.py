@@ -18,11 +18,13 @@ def test_get_set(name, color_code):
     print("OLD", old, color_code)
     assert str(old) == str(color_code)
 
+
 def test_Named_palette_exception():
     """Example test with parametrization."""
     p = palette.NamedPalette("Triad")
     with pytest.raises(TypeError):
         p["test"] = "#909090909"
+
 
 def test_Linear_palette_exception():
     """Example test with parametrization."""
@@ -66,7 +68,6 @@ def test_material_ui(name, color_code):
         ("Primary", "#6750A4"),
         ("Primary", "6750A4"),
         ("Primary", 0x6750A4),
-
     ],
 )
 def test_material_ui_v3_Dark(name, color_code):
@@ -75,11 +76,11 @@ def test_material_ui_v3_Dark(name, color_code):
     old = p[name]
     assert old == color_code
 
+
 @pytest.mark.parametrize(
     ("name", "color_code"),
     [
         ("Background", "#222831"),
-
     ],
 )
 def test_bluewagon(name, color_code):
@@ -88,13 +89,13 @@ def test_bluewagon(name, color_code):
     old = p[name]
     assert old == color_code
 
+
 @pytest.mark.parametrize(
     ("name", "color_code"),
     [
         ("Primary", "#D0BCFF"),
         ("Primary", "D0BCFF"),
         ("Primary", 0xD0BCFF),
-
     ],
 )
 def test_material_ui_v3_light(name, color_code):
