@@ -29,9 +29,9 @@ jobs:
         poetry config virtualenvs.in-project true
         poetry install
 
-    # - name: Run style checks
-    #   run: |
-    #     make check-codestyle
+    - name: Run style checks
+      run: |
+        make check-codestyle
 
     - name: Run tests
       run: |

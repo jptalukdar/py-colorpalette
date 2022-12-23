@@ -27,6 +27,13 @@ install:
 pre-commit-install:
 	poetry run pre-commit install
 
+.PHONY: codestyle-win
+codestyle-win:
+	poetry run pyupgrade --exit-zero-even-if-changed --py39-plus py_colorpalette/color.py
+	poetry run pyupgrade --exit-zero-even-if-changed --py39-plus py_colorpalette/palette.py
+	poetry run isort --settings-path pyproject.toml ./
+	poetry run black --config pyproject.toml ./
+
 #* Formatters
 .PHONY: codestyle
 codestyle:
@@ -40,7 +47,7 @@ formatting: codestyle
 #* Linting
 .PHONY: test
 test:
-	PYTHONPATH=$(PYTHONPATH) poetry run pytest -c pyproject.toml --cov-report=html --cov=py_colorpalette tests/
+	poetry run pytest -c pyproject.toml --cov-report=html --cov=py_colorpalette tests/
 	poetry run coverage-badge -o assets/images/coverage.svg -f
 
 .PHONY: check-codestyle
