@@ -1,4 +1,4 @@
-# Docker for py-colorpalette
+# Docker for rang-colorpalette
 
 ## Installation
 

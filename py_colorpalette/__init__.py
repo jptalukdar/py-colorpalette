@@ -1,5 +1,5 @@
 # type: ignore[attr-defined]
-"""Awesome `py-colorpalette` is a Python cli/package created with https://github.com/TezRomacH/python-package-template"""
+"""Awesome `rang-colorpalette` is a Python cli/package created with https://github.com/TezRomacH/python-package-template"""
 
 import sys
 

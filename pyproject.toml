@@ -4,14 +4,14 @@ requires = ["poetry_core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "py-colorpalette"
+name = "rang-colorpalette"
 version = "0.1.0"
-description = "Awesome `py-colorpalette` is a Python cli/package created with https://github.com/TezRomacH/python-package-template"
+description = "Awesome `rang-colorpalette` is a Python cli/package created with https://github.com/TezRomacH/python-package-template"
 readme = "README.md"
-authors = ["py-colorpalette <github@jyotiplaban.com>"]
+authors = ["rang-colorpalette <github@jyotiplaban.com>"]
 license = "GNU GPL v3.0"
-repository = "https://github.com/jptalukdar/py-colorpalette"
-homepage = "https://github.com/jptalukdar/py-colorpalette"
+repository = "https://github.com/jptalukdar/rang-colorpalette"
+homepage = "https://github.com/jptalukdar/rang-colorpalette"
 
 # Keywords description https://python-poetry.org/docs/pyproject/#keywords
 keywords = []  #! Update me
@@ -131,7 +131,7 @@ addopts = [
 source = ["tests"]
 
 [coverage.paths]
-source = "py-colorpalette"
+source = "rang-colorpalette"
 
 [coverage.run]
 branch = true
