@@ -1,7 +1,7 @@
 """Tests for Colors"""
 import pytest
 
-from py_colorpalette import color
+from rang_colorpalette import color
 
 
 @pytest.mark.parametrize(

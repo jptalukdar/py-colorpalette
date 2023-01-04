@@ -1,7 +1,7 @@
 from typing import Any
 
 try:
-    from py_colorpalette import color
+    from rang_colorpalette import color
 except ModuleNotFoundError:
     import color
 

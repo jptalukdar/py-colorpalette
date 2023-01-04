@@ -1,6 +1,6 @@
 import pytest
 
-from py_colorpalette import color, palette, themes
+from rang_colorpalette import color, palette, themes
 
 
 @pytest.mark.parametrize(

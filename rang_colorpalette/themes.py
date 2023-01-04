@@ -1,5 +1,5 @@
 try:
-    from py_colorpalette import palette
+    from rang_colorpalette import palette
 except ModuleNotFoundError:
     import palette
 

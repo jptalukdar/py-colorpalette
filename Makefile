@@ -4,7 +4,7 @@ PYTHON := python
 PYTHONPATH := `pwd`
 
 #* Docker variables
-IMAGE := py_colorpalette
+IMAGE := rang_colorpalette
 VERSION := latest
 
 #* Poetry
@@ -30,9 +30,9 @@ pre-commit-install:
 # Adding a diff module for windows since **/*.py doesn't work
 .PHONY: codestyle-win
 codestyle-win:
-	poetry run pyupgrade --exit-zero-even-if-changed --py39-plus py_colorpalette/color.py
-	poetry run pyupgrade --exit-zero-even-if-changed --py39-plus py_colorpalette/palette.py
-	poetry run pyupgrade --exit-zero-even-if-changed --py39-plus py_colorpalette/themes.py
+	poetry run pyupgrade --exit-zero-even-if-changed --py39-plus rang_colorpalette/color.py
+	poetry run pyupgrade --exit-zero-even-if-changed --py39-plus rang_colorpalette/palette.py
+	poetry run pyupgrade --exit-zero-even-if-changed --py39-plus rang_colorpalette/themes.py
 	poetry run pyupgrade --exit-zero-even-if-changed --py39-plus tests/test_colors/test_colors.py
 	poetry run pyupgrade --exit-zero-even-if-changed --py39-plus tests/test_palette/test_palette.py
 	poetry run isort --settings-path pyproject.toml ./
@@ -56,14 +56,14 @@ formatting: codestyle
 #* Linting
 .PHONY: test
 test:
-	poetry run pytest -c pyproject.toml --cov-report=html --cov=py_colorpalette tests/
+	poetry run pytest -c pyproject.toml --cov-report=html --cov=rang_colorpalette tests/
 	poetry run coverage-badge -o assets/images/coverage.svg -f
 
 .PHONY: check-codestyle
 check-codestyle:
 	poetry run isort --diff --check-only --settings-path pyproject.toml ./
 	poetry run black --diff --check --config pyproject.toml ./
-	poetry run darglint --verbosity 2 py_colorpalette tests
+	poetry run darglint --verbosity 2 rang_colorpalette tests
 
 .PHONY: mypy
 mypy:
@@ -73,7 +73,7 @@ mypy:
 check-safety:
 	poetry check
 	poetry run safety check --full-report
-	poetry run bandit -ll --recursive py_colorpalette tests
+	poetry run bandit -ll --recursive rang_colorpalette tests
 
 .PHONY: lint
 lint: test check-codestyle mypy check-safety
